@@ -7,17 +7,191 @@
     <!-- tailwind -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
-
+<!-- fontawesome icon -->
+<script src="https://kit.fontawesome.com/39e654cf69.js" crossorigin="anonymous"></script>
+<!-- google font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+.font-lato{
+    font-family: 'Lato', sans-serif;
+}
+</style>
 </head>
 <body>
-    <header>
-
+    <header class="font-lato max-w-screen mx-auto px-8 md:px-16 lg:px-24 py-5 my-10 ">
+        <div class="navbar bg-rose-500 px-8 flex  rounded-3xl"> 
+            <div class="">
+                <ul class="flex text-white p-5 gap-4">
+                    <li><a>Home</a></li>
+                    <li><a>About Us</a></li>
+                    <li><a>Shop</a></li>
+                    <li><a>All Fruits</a></li>
+                </ul>
+            </div>
+            <div class=" flex-1 flex-row-reverse  gap-4 justify-center ">
+                <h3 class="text-4xl text-white">Fruit Burst</h3>
+                <img src="/images/logo.png">
+        </div>
+        <div class="">
+            <input type="text" placeholder="Search here" class="input input-bordered w-96 md:w-auto"/>
+        </div>
+               
+          </div>
     </header>
     <main>
+<!-- carousel banner section  -->
+<section class=" max-w-screen mx-auto px-8 md:px-16 lg:px-24 py-5 my-10 font-lato">
+    <div class="hero min-h-screen">
+        
+      <div class="carousel w-full">
+        <div id="slide1" class="carousel-item relative w-full">
+          <img src="/images/banner1.png" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 ">
+            <a href="#slide4" class="btn btn-circle">❮</a> 
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div> 
+        <div id="slide2" class="carousel-item relative w-full">
+          <img src="/images/banner2.png" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide1" class="btn btn-circle">❮</a> 
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div> 
+        <div id="slide3" class="carousel-item relative w-full">
+          <img src="/images/banner3.png" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide2" class="btn btn-circle">❮</a> 
+            <a href="#slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div> 
+        <div id="slide4" class="carousel-item relative w-full">
+          <img src="/images/banner4.png" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide3" class="btn btn-circle">❮</a> 
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+        <!--  -->
+        <div class="hero-overlay bg-opacity-60"></div>
+        <div class="hero-content text-center text-neutral-content">
+          <div class="max-w-md">
+            <h1 class="mb-5 text-5xl font-bold">Exotic tastes at your<br> doorstep</h1>
+            <p class="mb-5">We supply highly quality organic products</p>
+            <button class="btn btn-primary">Get Started</button>
+          </div>
+        </div>
+      </div>
+</section>
+<!-- deal & card section -->
+<section class="max-w-screen mx-auto px-8 md:px-16 lg:px-24 py-5 my-10 font-lato">
+  <div class="flex justify-between">
+    <div class="">
+    <h4 class="text-black text-3xl py-8 font-extrabold">Deal of the day</h4>
+    <p>Contrary to popular belief, is not simply random text. It has roots in a piece of classical<br> Latin literature from 45 BC, making it over 2000 years old.</p>
+   </div>
+   <div class="flex py-8">
+    <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+      <div class="flex flex-col">
+        <span class="countdown font-mono text-3xl">
+          <span style="--value:15;"></span>:
+        </span>
+        days
+      </div> 
+      <div class="flex flex-col">
+        <span class="countdown font-mono text-3xl">
+          <span style="--value:10;"></span>:
+        </span>
+        hours
+      </div> 
+      <div class="flex flex-col">
+        <span class="countdown font-mono text-3xl">
+          <span style="--value:24;"></span>:
+        </span>
+        min
+      </div> 
+      <div class="flex flex-col">
+        <span class="countdown font-mono text-3xl">
+          <span style="--value:38;"></span>
+        </span>
+        sec
+      </div>
+    </div>
+   </div>
+  </div>
+  
+  <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-8">
 
+    <!-- card-1 -->
+    <div class="card w-80 h-96 pb-3 bg-base-100 shadow-xl">
+      <figure class="px-10 pt-10">
+        <img src="/images/fruit6.png" alt="Shoes" class="rounded-xl" />
+      </figure>
+      <div class="card-body items-center text-center">
+        <h2 class="card-title">12.90$ - 18.85$</h2>
+        <p>Apples</p>
+        <!-- ratting -->
+        <div class="rating rating-lg rating-half">
+          <input type="radio" name="rating-10" class="rating-hidden" />
+          <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" />
+          <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
+          <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" checked />
+          <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
+          <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" />
+          <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
+          <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" />
+          <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
+          <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" />
+          <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
+        </div>
+      </div>
+      <!-- Open the modal using ID.showModal() method -->
+   <div class="">
+
+
+   
+    <a class=" px-36" onclick="my_modal_5.showModal()">Details</a>
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+      <form method="dialog" class="modal-box">
+        <img class="px-44" src="/images/fruit6.png">
+        <h3 class="font-bold text-lg text-center">Apples</h3>
+        <p class="py-4 text-center">Professional employees are there for you to pick the most amazing and fresh fruits. </p>
+        <!-- ratting -->
+        <div class="rating rating-lg rating-half px-32">
+          <input type="radio" name="rating-10" class="rating-hidden" />
+          <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" />
+          <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
+          <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" checked />
+          <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
+          <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" />
+          <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
+          <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" />
+          <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
+          <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-1" />
+          <input type="radio" name="rating-10" class="bg-green-500 mask mask-star-2 mask-half-2" />
+        </div>
+    
+        <div class="modal-action flex justify-center">
+          <!-- if there is a button in form, it will close the modal -->
+          <button class="btn">Close</button>
+          <button class="btn btn-primary">Buy Now</button>
+         
+        </div>
+      </form>
+    </dialog>
+   </div>
+      </div>
+
+
+
+      </div>
+</section>
     </main>
     <footer>
-        
+
     </footer>
 </body>
 </html>
